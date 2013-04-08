@@ -1,0 +1,13 @@
+td.errors {color:red;width: 280px;}
+.hidden{display:none;}
+
+form#needHelp td#phones input[name="Prefix"], form#needHelp td#phones input[name="Area"] {width: 10%}
+form#needHelp td#phones input[name="Phone"] {width:57%}
+form#needHelp  input[name="email"] {width:94%}
+form#needHelp  input.medBG  {width:87%}
+form#needHelp  td#checkBx label  {display:inline;color:white;}
+
+
+#right-sidebar .widget_lead_widget{padding: 15px 0;}
+#right-sidebar  #needHelp, #right-sidebar .widget_lead_widget h3{text-align:center;}
+ #right-sidebar .widget_login_widget input[type="text"], #right-sidebar .widget_login_widget input[type="password"]{width:190px;}

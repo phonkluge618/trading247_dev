@@ -1,0 +1,1815 @@
+/*
+Theme Name: Spot Base 
+Theme URI: http://spotoption.com/
+Description: The 2010 default theme for Spotoption platform.
+Author: SpotOption
+Author URI: http://spotoption.com/
+Version: 1.0
+
+
+License:
+License URI:
+
+General comments (optional).
+*/
+
+/******************************************************************************
+PAGE STRUCTURE 
+******************************************************************************/
+#body404{
+    line-height: 1;
+    width: auto;
+    padding-top: 30px;
+    background: #EEF3FA;
+}
+.continer404{
+    width: 733px;
+    margin: 0 auto;
+    border: 1px solid #A9ACB1;
+}
+#headerBg404{
+    background: transparent url(images/slices/header/headerBg.png) repeat-x 0 0 scroll;
+    height: 130px;
+}
+#content404{
+    width: 733px;
+    background-color: #FFFCFC;
+    text-align: center;
+}
+#errorMassegatop{
+    font-size: 25px;
+    color: #8CB10B;
+    font-weight: bold;
+    padding: 100px;
+    display: block;  
+}
+#errorMassegabotton{
+    font-size: 18px;
+    color: #5D605B;
+    font-weight: bold;
+    padding: 42px;
+    display: block;  
+}
+.menu-error-menu-container{
+    width: 736px;
+    margin: 0 auto;
+    height: 33px;
+    background: #F1F2EF;
+    border: 1px solid #C4C5C0;
+}
+#menu-error-menu{
+    padding: 0;
+    margin: 0 auto;
+    width: 620px;
+    height: 33px;
+}
+#menu-error-menu li {
+    float: left;
+    text-align: center;
+    list-style: none;
+}
+#menu-error-menu li a {
+display: block;
+float: left;
+font-size: 13px;
+height: 35px;
+line-height: 35px;
+padding-left: 2px;
+padding-right: 2px;
+width: 103px;
+overflow: hidden;
+color: #6D6D6D;
+text-transform: capitalize;
+text-decoration: none;
+background: url("images/sprites/sprite_homepro.png") no-repeat scroll -12px -52px transparent;
+}
+#menu-error-menu li#menu-item-497 a {
+    background: url("images/slices/homePro/selectedMainMenu.png") repeat-x scroll 0 0 transparent;
+}
+#bodyBotton{
+    background: url("images/slices/header/error_page_bottom.png") no-repeat scroll 0 0 transparent;
+    width: 733px;
+    height: 9px;
+    margin: 0 auto;
+}
+/*#bottonborder{
+    border: 1px solid #C4C5C0;
+    width: 731px;
+    margin: 0 auto;
+}*/
+.Logo404{
+    background: url("images/sprites/sprite_header.png") no-repeat scroll -8px -88px transparent;
+    display: block;
+    height: 103px;
+    width: 266px;
+}
+.hidden{display:none;}
+body{
+    font-family: Arial,tahoma;
+    font-size: 12px;
+    color:#424242;margin:0px;
+}
+.cb, .clear {
+clear: both;
+float: none;
+font-size: 0;
+height: 0;
+}
+ul {
+list-style-type: none;
+}
+body.single-post .post, body.category  .post, body.page-template-default .post{
+padding: 20px 20px 20px 20px;
+width: 686px;
+margin: 0;
+}
+/*----------------header css-------------------------------*/
+div#headerBg {
+background:transparent url(images/slices/header/headerBg.png) repeat-x 0 0 scroll;
+height: 130px;
+margin: 0 auto;
+position:relative;
+z-index: 9;
+
+}
+#Header{
+    height: 120px;
+    padding-top: 10px;
+   
+}
+#Header, #Main {
+    margin: 0 auto;
+    width: 978px;
+}
+.container{
+    width:100%;
+    margin:0 auto 0;
+    z-index: 10;
+}
+#userLoginForm{
+    width: 383px;
+    float: right;
+}
+.log {
+    float: right;
+    margin: 20px auto;
+    width: 480px;
+    height: 76px;
+}
+.ie.log {
+    margin: 0px auto;
+}
+.login {
+    width: 477px;
+    float: right;
+    margin: 0px auto;
+    height: 76px;
+ }
+#headerForm #loggedInBox .welcome{
+    float: left;
+    width: 130px;
+}
+#headerForm #loggedInBox .welcometext{
+    float: left;
+}
+#headerForm #loggedInBox .balance{
+    float: left;
+    width: 140px;
+}
+#headerForm #loggedInBox .balanceText{
+    float: left;
+}
+#headerForm #loggedInBox .logoutForm{
+    float: right;
+}
+form.logoutForm .logoutLink  {
+background: url("images/sprites/sprite_header.png") no-repeat scroll -6px -241px transparent;
+cursor: pointer;
+float: right;
+font-size: 12px;
+height: 26px;
+margin: -3px 0 0 3px;
+width: 69px;
+line-height: 28px;
+text-align: center;
+color: #5B5D5F;
+border: none;
+}
+.logged_in_menu {
+float: right;
+height: 23px;
+line-height: 26px;
+text-align: left;
+width: 477px;
+border: 1px solid #BCBDB7;
+padding: 0;
+}
+.logged_in_menu li.depositNav.current-menu-item {
+background: url("images/sprites/sprite_header.png") no-repeat scroll -9px -511px transparent;
+}
+.logged_in_menu li.depositNav{
+background: url("images/sprites/sprite_header.png") no-repeat scroll -9px -415px transparent;
+}
+.logged_in_menu li.accountHistoryNav.current-menu-item {
+background: url("images/sprites/sprite_header.png") no-repeat scroll -9px -543px transparent;
+
+}
+.logged_in_menu li.accountHistoryNav{
+background: url("images/sprites/sprite_header.png") no-repeat scroll -9px -447px transparent;
+border-left: 1px solid #BCBDB7;
+border-right: 1px solid #BCBDB7;
+width: 157px;
+}
+.logged_in_menu li.myPositionNav.current-menu-item {
+background: url("images/sprites/sprite_header.png") no-repeat scroll -9px -575px transparent;
+}
+.logged_in_menu li.myPositionNav{
+background: url("images/sprites/sprite_header.png") no-repeat scroll -9px -479px transparent;
+}
+.logged_in_menu li {
+color: #5b5d5f;
+display: block;
+float: right;
+width: 159px;
+line-height: 24px;
+text-align: center;
+}
+
+form.loginForm input.submit{
+    background: url("images/sprites/sprite_header.png") no-repeat scroll -8px -240px transparent;
+    color: #5B5D5F;
+    cursor: pointer;
+    font-size: 12px;
+    height: 28px;
+    line-height: 28px;
+    margin: -3px 0 0 3px;
+    text-align: center;
+    width: 69px;
+    border:none;
+    float: right;
+}
+form.loginForm input.text, form.loginForm input.textField  {
+    background: url("images/sprites/sprite_header.png") no-repeat scroll -8px -194px white;
+    height: 20px;
+    width: 140px;
+    line-height: 15px;
+    border:none; 
+    text-indent: 3px;
+}
+#Header .ForgotPassword {
+    color: #144452;
+    float: left;
+    font-size: 10px;
+    margin-left: 19px;
+    margin-top: 1px;
+    text-align: center;
+    text-decoration: underline;
+    width: 242px;
+    height: 13px;
+    line-height: 13px;
+}
+
+#Header .CurrentDate {
+float: right;
+margin-top: 9px;
+}
+#Header .Time span {
+float: left;
+}
+#LShour {
+margin-left: 0;
+}
+#LShour, #LSminute, #LSseconds {
+color: #42464B;
+font-size: 18px;
+width: 35px;
+text-align: center;
+background: url("images/sprites/sprite_header.png") no-repeat scroll -7px -292px transparent;
+}
+#Header .Time {
+float: left;
+height: 25px;
+line-height: 25px;
+padding-left: 0;
+text-align: center;
+width: 111px;
+}
+#Header .Date {
+color: #2F3744;
+float: left;
+height: 22px;
+padding: 4px 0 0;
+text-align: center;
+width: 120px;
+font-size: 12px;
+}
+#Header #langContainer{
+ width: 149px;
+float: right;   
+}
+#Header .langSelectContainer {
+background: url("images/sprites/sprite_header.png") no-repeat scroll -7px -351px transparent;
+float: right;
+height: 22px;
+width: 141px;
+border: none;
+}
+#logo{
+    float: left;
+}
+.Logo{
+    background: url("images/sprites/sprite_header.png") no-repeat scroll -8px -109px transparent;
+    display: block;
+    height: 69px;
+    margin: 17px 0 0 10px;
+    width: 267px;
+}
+/*----------------End header css-------------------------------*/
+/*----------------menu css-------------------------------*/
+#phoneGif{
+    background: url("images/slices/phones.gif") no-repeat -2px 6px;
+    height: 30px;
+    width: 240px;
+    display: block;
+}
+.menu-topnav-container {
+margin: 0 auto;
+width: 979px;
+}
+#menu-topnav {
+background: url("images/sprites/sprite_homepro.png") no-repeat scroll -8px -3px transparent;
+height: 35px;
+padding: 0;
+margin: 0;
+}
+#menu-topnav li {
+float: left;
+text-align: center;
+list-style: none;
+}
+#menu-topnav li.current-menu-item a {
+text-decoration: underline;
+background: url("images/slices/homePro/selectedMainMenu.png") repeat-x scroll 0 0 transparent;
+}
+#menu-topnav li.current-menu-item a:last-child {
+width: 126px;
+}
+#menu-topnav li.selected a:last-child{
+width: 126px;
+}
+#menu-topnav li a {
+display: block;
+float: left;
+font-size: 13px;
+height: 35px;
+line-height: 35px;
+padding-left: 2px;
+padding-right: 2px;
+width: 117px;
+overflow: hidden;
+color: #6D6D6D;
+text-transform: capitalize;
+text-decoration: none;
+background: url("images/sprites/sprite_homepro.png") no-repeat scroll -12px -52px transparent;
+}
+/*----------------End menu css-------------------------------*/
+/*---------------- index css-------------------------------*/
+#index{
+    margin: 0px auto;
+    width: 979px;
+}
+#homePromoBanner{
+height: 238px;
+width: 729px;
+background: url("images/slices/banner.png") no-repeat scroll 0 0 transparent;
+float: left;
+}
+#tradezone{
+    
+}
+#tradezone-top{
+  margin-top: -10px;
+}
+#HeaderNews {
+background: url("images/sprites/sprite_homepro.png") no-repeat scroll -10px -94px transparent;
+height: 35px;
+line-height: 28px;
+margin: 5px auto;
+padding: 0;
+width: 976px;
+}
+#marqueeTopParent {
+margin-left: 90px;
+margin-top: 1px;
+width: 637px ;
+position: absolute;
+}
+#reuters{
+width: 630px;
+margin-top: 2px;    
+}
+#call{
+    background: url("images/sprites/sprite_homepro.png") no-repeat scroll -19px -159px transparent;
+    padding: 0 20px 0 10px;
+}
+#put{
+    background: url("images/sprites/sprite_homepro.png") no-repeat scroll -235px -159px transparent;
+    padding: 0 20px 0 10px;
+}
+#HeaderNews #phoneDiv {
+float: right;
+height: 32px;
+text-align: center;
+width: 241px;
+}
+
+/*----------------End index css-------------------------------*/
+/*----------------right side css-------------------------------*/
+.rightSide{
+   height: auto;
+   width: 243px;
+   float: right;
+}
+#needHelp{
+   padding: 5px; 
+}
+.rightSide .widget.widget_lead_widget {
+    background: url("images/sprites/sprite_column.png") no-repeat scroll -5px -6px transparent;
+    font-size: 11px;
+    text-align: center;
+    float: right;
+    width: 243px;
+    height: 237px;
+    margin-bottom: 5px;
+}
+.rightSide .widget.widget_lead_widget .widget-title{
+    margin: 20px auto; 
+}
+.widget_super_rss_reader .srr-title a{
+    font-weight: normal;
+    color:#516802;
+}
+.widget_super_rss_reader .srr-summary.srr-clearfix{
+    padding: 0 0 15px 0;
+    color:#3c4836;
+    margin: 0 !important;
+}
+.rightSide .widget.widget_lead_widget .widget-title,.rightSide .how_to_trade .title ,.rightSide .widget_super_rss_reader .widget-title{
+    font-size: 20px;
+    line-height: 6px;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    color: #B6640B;
+}
+.rightSide .widget.widget_lead_widget .need_help_table {
+    width: 207px;
+    margin: 0 auto;
+}
+.rightSide .widget.widget_lead_widget .need_help_table td {
+    padding: 0 0 5px ;
+    text-align: left;
+}
+.rightSide .widget.widget_lead_widget td .medBG.first {
+    margin-right: 6px;
+}
+.rightSide .widget.widget_lead_widget td .medBG {
+    background: url("images/sprites/sprite_column.png") no-repeat scroll -15px -358px transparent;
+    height: 20px;
+    width: 100px;
+    border:none !important;
+    text-indent: 2px;
+    font-size: 11px;
+}
+.rightSide .widget.widget_lead_widget .need_help_table td#phones {
+    padding-bottom: 0
+}
+.rightSide .widget.widget_lead_widget .need_help_table td .bigBG input {
+    background: url("images/sprites/sprite_column.png") no-repeat scroll -15px -430px transparent;
+    width: 206px;
+    height: 22px;
+    border:none !important;
+    text-indent: 2px;
+    font-size: 11px;
+}
+.need_help_table .rightSide .widget.widget_lead_widget td .last {
+    margin-left: 1px;
+    float: left;
+}
+.rightSide .widget.widget_lead_widget .submit {
+    background: url("images/sprites/sprite_column.png") no-repeat scroll -20px -577px transparent;
+    color: #42464B;
+    cursor: pointer;
+    font-size: 18px;
+    height: 33px;
+    line-height: 33px;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 206px;
+    margin: 0 auto;
+    font-size: 18px;
+    border: none;
+}
+.rightSide .widget.widget_lead_widget .tny {
+    background: url("images/sprites/sprite_column.png") no-repeat scroll -15px -466px transparent;
+    width: 43px;
+    height: 22px;
+    padding: 0 0 0 4px;
+    float: left;
+    margin-right: 6px;
+    border: none;
+    font-size: 11px;
+}
+.rightSide .widget.widget_lead_widget .mid {
+    background: url("images/sprites/sprite_column.png") no-repeat scroll -15px -358px transparent;
+    width: 100px;
+    height: 20px;
+    float: left;
+    border: none !important;
+    text-indent: 2px;
+    font-size: 11px;
+}
+.rightSide .widget.widget_lead_widget .countrylist.selectbox  {
+    background: url("images/sprites/sprite_column.png") no-repeat scroll -15px -394px transparent;
+    width: 206px;
+    height: 22px;
+    line-height: 22px;
+    cursor: pointer;
+    padding: 0 0 0 4px;
+    border:none;
+}
+.rightSide .widget.widget_lead_widget .countrylist.selectbox option {
+    
+}
+.rightSide .how_to_trade {
+    background: url("images/sprites/sprite_column.png") no-repeat -426px -5px scroll;
+    height: auto;
+    margin-bottom: 3px;
+    margin-left: 0px;
+    margin-top: 0;
+    width: 242px;
+    float:left;
+}
+.rightSide .howToTradeTabs {
+    width: 241px;
+    height: 43px;
+    float: right;
+    margin-top: 6px;
+    padding: 0;
+}
+
+.rightSide .howToTradeTabs li.selected {
+    background: url("images/slices/rightcolum/howToTradeSelected.png") repeat-x scroll 0 0 transparent;
+    color: #61500D;
+    padding: 0;
+}
+.ie .rightSide .howToTradeTabs li{
+    margin-top: 2px;
+} 
+.rightSide .howToTradeTabs li {
+    color: #61500d;
+    cursor: pointer;
+    float: left;
+    font-size: 14px;
+    text-align: center;
+    list-style: none;
+    width: 60px;
+    height: 40px;
+}
+.rightSide .howToTradeTabs li.hSep {
+    width: 2px;
+    height: 38px;
+    margin-top: 12px;
+    background: url("images/sprites/sprite_column.png") no-repeat scroll -437px -407px transparent;
+}
+.rightSide .how_to_trade .text {
+    margin: 0;
+    border: 1px solid #9E9C9C;
+    border-top: none;
+    background: #FFFCFC;
+    float: left;
+    width: 240px;
+    border-bottom: none;
+    min-height: 268px;
+}
+.rightSide .how_to_trade .text ul li {
+    padding: 0 0 0 3px;
+    list-style: none;
+    min-height: 60px;
+}
+.rightSide .how_to_trade .number {
+    float: left;
+    font-weight: normal;
+    padding: 0;
+    color: #d5deb0;
+    font-size: 24px;
+    clear: left;
+}
+.bottonHow2treade{
+    background: url("images/sprites/sprite_column.png") no-repeat -423px -247px scroll;
+    height: 7px;
+    float: right;
+    width: 242px;
+}
+.how_to_trade .text  ul{
+    padding: 0;
+    margin-bottom: 0;
+}
+.rightSide .supportBtn {
+    background: url("images/sprites/sprite_column.png") no-repeat scroll -425px -501px;
+    display: block;
+    height: 64px;
+    margin: 0 0 5px -2px;
+    width: 246px;
+    text-decoration: none;
+    clear: both;
+    cursor: pointer;
+}
+.rightSide .supportBtn .support {
+    font-size: 25px;
+    color: #B56004;
+    margin-left: 15px;
+    text-transform: capitalize;
+    font-weight: normal;
+    letter-spacing: -1px;
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    padding-top: 10px;
+}
+.rightSide .supportBtn .hours {
+    color: #B56004;
+    font-size: 14px;
+    margin-left: 16px;
+    font-weight: bold;
+    display: block;
+    height: 14px;
+    line-height: 14px;
+    padding-top: 2px;
+}
+
+.rightSide .widget_super_rss_reader{
+    height: 262px;
+    background: transparent url("images/sprites/sprite_column.png") no-repeat -426px -662px scroll;
+    clear: both;
+    margin-bottom: 5px;
+}
+.rightSide .widget_super_rss_reader .widget-title{
+    line-height: 40px;
+    color: #8d908b;
+    font-weight: bold;
+}
+.rightSide .widget_super_rss_reader .srr-wrap{
+    height: 210px !important;
+    width: 236px;
+    left: 5px;
+}
+.rightSide .how_to_trade .stepswordpress{
+float: left;
+padding-left: 2px;
+padding-top: 4px;
+font-size: 12px;
+width: 221px;
+font-family: tahoma !important;
+line-height: 20px;
+}
+/*----------------End right side css-------------------------------*/
+/*----------------Footer css-------------------------------*/
+
+#Footer {
+    background: none repeat scroll 0 0 transparent;
+    width: 979px;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: none;
+    clear: both;
+    padding-top: 10px;
+}
+#Footer .footerMenu-global {
+    margin: 0 auto;
+    padding: 15px 0 5px;
+    width: 979px;
+    background: url("images/sprites/sprite_footer.png") no-repeat scroll -108px -193px transparent;
+    height: 151px;
+}
+#Footer h4 {
+    color: #6A8609;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+    text-align: left;
+    text-transform: uppercase;
+}
+#Footer .listContainer{
+    width: 180px;
+    min-height: 153px;
+    float: left;
+    padding-left: 15px;
+
+}
+#Footer .footerMenu-global ul{
+    padding: 0;
+}
+#Footer .footerMenu-global ul li{
+    list-style: none;
+    padding-top: 10px;
+}
+#Footer .footerMenu-global ul li a {
+    color: #333824;
+    font-size: 14px;
+    text-decoration: none;
+    list-style: none;
+}
+div.footerBottom {
+    width: 100%;
+    background: transparent;
+    padding-top: 1px;
+}
+div.logobar {
+    width: 979px;
+    height: 31px;
+    background: url("images/sprites/sprite_footer.png") no-repeat scroll -107px -459px transparent;
+    clear: both;
+    margin: 7px auto 0;
+}
+div.powered {
+    height: 51px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    margin: 7px 0 0 0;
+}
+div.powered a {
+    display: block;
+    width: 198px;
+    margin: auto;
+    margin-bottom: 7px;
+}
+#spotLogo {
+    background: url("images/sprites/sprite_footer.png") no-repeat scroll -477px -607px transparent;
+    height: 36px;
+    width: 198px;
+    margin: auto;
+    cursor: pointer;
+}
+#Footer .GEdit.disclaimerText {
+    color: #4f4f4f;
+    font-size: 10px;
+    margin: 0 auto;
+    padding: 0 5px;
+    text-align: center;
+}
+/*----------------End Footer css-------------------------------*/
+
+/*----------------open account and my account css-------------------------------*/
+.nextDeposit{
+    background: url("images/sprites/sprite_homepro.png") no-repeat scroll -12px -1965px transparent;
+    color: #516802;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    height: 37px;
+    float: right;
+    text-align: center;
+    text-transform: capitalize;
+    width: 221px;
+    border:none;
+    line-height: 34px;
+}
+#boxBtn{
+    width: 471px;
+    padding-top: 20px;
+}
+#index #openAccountForm {
+    width: 708px;
+    background: #fffcfc;
+}
+#index #accountForm {
+    width: 720px;
+    margin-top: -1px;
+}
+.box{
+    background: url("images/sprites/sprite_innerPages.png") no-repeat scroll -55px -75px transparent;
+    height: 38px;
+    line-height: 38px;
+    text-align: left;
+    text-transform: capitalize;
+    width: 708px;
+    color: #3e3a3a;
+    margin-top: -1px;padding: 0 20px;
+}
+.box span{
+    padding-left: 10px;
+    font-size: 17px;
+}
+.contectConntent{
+    width: 600px;
+    margin: 0 auto; 
+}
+.mune-registrantion{
+    width: 702px;
+    height: 60px; 
+}
+.mune-registrantion ul.registrationSteps {
+    list-style-type: none;
+    height: 36px;
+    margin: 15px 0 0 0;
+    padding-left: 20px;
+}
+.mune-registrantion ul.registrationSteps li.current {
+    background-position: -58px -1280px;
+}
+.mune-registrantion ul.registrationSteps li {
+    background: url("images/sprites/sprite_innerPages.png") no-repeat scroll -520px -1283px transparent;
+    color: #42464b;
+    float: left;
+    font-size: 15px;
+    height: 37px;
+    line-height: 37px;
+    text-transform: capitalize;
+    width: 221px;
+    font-weight: 600;
+    margin-left: -1px;
+}
+.mune-registrantion ul.registrationSteps span.registrationStepsText {
+    display: block;
+    text-indent: 44px;
+}
+.openAccountButton{
+    width: 483px;
+}
+#openAccountForm #accountForm table {
+    width: 726px;
+    margin: 0 auto;
+    padding: 20px 0 30px 0;
+    overflow: hidden;
+    text-align: left;
+}
+#accountForm table td.propName {
+    color: #302b2b;
+    font-size: 12px;
+    padding: 0 50px 0 0;
+    text-transform: capitalize;
+    white-space: nowrap;
+    text-align: right;
+    width: 213px;
+}
+#accountForm table td.inputTd {
+    width: 218px;
+    padding: 8px 0;
+}
+#accountForm table td.inputTd input {
+    background: transparent url("images/sprites/sprite_innerPages.png") no-repeat -74px -1388px scroll;
+    width: 206px;
+    height: 22px;
+    border: none;
+    text-indent: 3px;
+}
+#accountForm table td.inputTd input.phonePrefixInput, #accountForm table td.inputTd input.phoneAreaInput {
+    width: 47px;
+    height: 22px;
+    text-align: left;
+    float: left;
+    background: transparent url("images/sprites/sprite_innerPages.png") no-repeat -74px -1458px scroll;
+    margin-right: 7px;
+}
+#accountForm table td.inputTd input.phoneInput {
+    background: url("images/sprites/sprite_innerPages.png") no-repeat scroll -74px -1388px transparent;
+    width: 94px;
+    height: 22px;
+    float: left;
+    padding: 0 3px;
+}
+#accountForm table td.inputTd1 input {
+    background: url("images/sprites/sprite_innerPages.png") no-repeat scroll -74px -1750px transparent;
+    width: 94px;
+    height: 22px;
+    float: left;
+    padding: 0 3px;
+    border: none;
+}
+
+#accountForm table tr.Capcha td.inputTd1 img.captchaImage {
+    background-color: white;
+    border: 1px solid #AEAEAE;
+    height: 20px;
+    margin: 0px 0 0 3px;
+    width: 103px;
+}
+#accountForm table tr.terms td.checkTerm{
+    text-align: right;
+    padding-right: 22px;
+}
+#accountForm table td.errors label {
+    color: red;
+    font-size: 10px;
+    margin-left: 8px;
+    padding-top: 3px;
+}
+
+#accountForm table td.curCountry select {
+    display: block;
+    width: 206px;
+    height: 22px;
+    line-height: 22px;
+    background: transparent url(images/sprites/sprite_innerPages.png) no-repeat -74px -1533px scroll;
+    cursor: pointer;
+    padding: 0 0 0 6px;
+    border: none;
+}
+#accountForm table td.curName,#accountForm table td.curCountry{
+    padding-bottom: 8px;
+}
+#accountForm table td.curName select {
+    display: block;
+    width: 206px;
+    height: 22px;
+    background: transparent url(images/sprites/sprite_innerPages.png) no-repeat -74px -1533px scroll;
+    cursor: pointer;
+    padding: 0 0 0 6px;
+    border:none;
+}
+#accountForm .openAccountButton.button input{
+    background: url("images/sprites/sprite_homepro.png") no-repeat scroll -12px -1965px transparent;
+    color: #516802;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    height: 37px;
+    float: right;
+    text-align: center;
+    text-transform: capitalize;
+    width: 221px;
+    border:none;
+}
+
+/*----------------End open account css-------------------------------*/
+/*---------------- my account - diposit css-------------------------------*/
+.navigationContainer {
+background: url("images/sprites/sprite_myaccount.png") no-repeat scroll -11px -261px transparent;
+height: 266px;
+width: 242px;
+}
+.navigationContainer .side-myaccount-menu {
+padding: 0;
+margin: 0;
+text-align: center;
+}
+.navigationContainer .side-myaccount-menu li {
+background: url("images/sprites/sprite_myaccount.png") no-repeat scroll -31px -617px transparent;
+cursor: pointer;
+font-size: 14px;
+line-height: 33px;
+margin: 0 auto 6px;
+text-align: center;
+width: 206px;
+height: 33px;
+}
+.navigationContainer .side-myaccount-menu li a {
+color: #42464b;
+display: block;
+height: 33px;
+}
+.navigationContainer .side-myaccount-menu li.current_page_item a {
+color: #516802;
+}
+.navigationContainer .side-myaccount-menu li.current_page_item {
+background-position: -31px -695px;
+}
+a#MyAccount_backToTradingBtn {
+background: url("images/sprites/sprite_myaccount.png") no-repeat scroll -9px -781px transparent;
+color: #b56004;
+display: block;
+height: 64px;
+line-height: 64px;
+margin: 3px 0 0 -2px;
+text-align: center;
+text-transform: capitalize;
+width: 246px;
+font-size: 19px;
+font-weight: normal;
+text-indent: 39px;
+}
+.formsContainer{
+    width: 631px;
+    margin: 0 auto;
+}
+#creditCard_form, #wire_form{
+background-color: #fffcfc;
+margin: auto;
+border: 1px solid #d5d2d2;
+width: 579px;
+padding: 15px; 
+}
+#paymentMethods {
+width: 671px;
+height: 36px;
+margin: 20px auto 0;
+}
+#paymentMethods li {
+font-size: 13px;
+margin: 0 4px 0 0;
+text-align: center;
+text-transform: capitalize;
+float: left;
+cursor: pointer;
+list-style: none;
+}
+#paymentMethods li.selected div.right {
+height: 36px;
+}
+#paymentMethods li.selected, #paymentMethods li.selected label {
+cursor: default !important;
+}
+#paymentMethods li div.left {
+height: 36px;
+width: 130px;
+text-align: center;
+background: url("images/sprites/sprite_innerPages.png") no-repeat scroll -252px -1063px transparent;
+line-height: 36px;
+}
+#paymentMethods li.selected div.left {
+background: #fffcfc;
+width: 132px;
+height: 36px;
+border: 1px solid #d5d2d2;
+border-bottom: none;
+position: relative;
+}
+.pageRegular #depositForm table {
+    width: 686px;
+    margin: 0 auto;
+    padding: 10px 0 0px 0;
+    overflow: hidden;
+    text-align: left;
+}
+h2{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+h2 a{
+    color:black !important;
+    font-weight: normal;
+    font-size: 17px;
+    padding-left: 10px;
+}
+h3{
+    margin: 0;
+}
+h3.title{
+    background: none repeat scroll 0 0 transparent;
+    font-size: 24px;
+    line-height: 58px;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    color: #8d908b;
+    font-weight: 600;
+    }
+  
+#depositForm table td.propName, #addNewCard table td.propName {
+    color: #302b2b;
+    font-size: 12px;
+    padding: 0 50px 0 0;
+    text-transform: capitalize;
+    white-space: nowrap;
+    text-align: right;
+    width: 213px;
+}
+#depositForm table td.inputTd{
+    background: transparent url("images/sprites/sprite_myaccount.png") no-repeat -22px -889px scroll;
+    width: 206px;
+    height: 22px;
+    border: none;
+    text-indent: 3px; 
+}
+
+#endDate{
+    background: transparent url("images/sprites/sprite_myaccount.png") no-repeat -343px -450px scroll;
+    width: 94px;
+    border: none;
+    height: 22px;
+    padding-right: 10px;
+}
+#depositForm table td.selectTd #creditcard,#addNewCard .deposit td.selectTd #creditCardType,#addNewCard .deposit td.selectTd #country{
+    display: block;
+    width: 212px;
+    height: 22px;
+    line-height: 22px;
+    background: transparent url("images/sprites/sprite_myaccount.png") no-repeat -22px -948px scroll;
+    cursor: pointer;
+    padding: 0 0 0 6px;
+    border:none;
+}
+#depositForm table td.selectTd input {
+    width: 212px;
+    height: 22px;
+    background: transparent url("images/sprites/sprite_myaccount.png") no-repeat -22px -889px scroll;
+    text-align: left;
+    border:none !important;
+    text-indent: 3px;
+}
+#depositForm table td {
+    padding-top: 15px;
+}
+#creditCardType,#addNewCard .deposit td.selectTd .exp {
+    background: url("images/sprites/sprite_myaccount.png") no-repeat scroll -283px -949px transparent;
+    cursor: pointer;
+    float: left;
+    height: 22px;
+    line-height: 22px;
+    margin: 0 10px 0 0;
+    text-align: center;
+    width: 68px;
+    border:none;
+}
+#depositForm table #deleteCard {
+    background: url("images/sprites/sprite_myaccount.png") no-repeat scroll -322px -801px transparent;
+    font-size: 10px;
+    height: 24px;
+    margin-left: 10px;
+    width: 121px;
+    border:none !important;
+}
+#depositForm table td.selectTd input#cvvInput{
+    width: 58px;
+    height: 22px;
+    background: url("images/sprites/sprite_myaccount.png") no-repeat -283px -887px;
+    line-height: 15px;
+    border:none !important;
+    padding-left: 10px;
+}
+#cvvPopup {
+    background: url("images/slices/myAccount/cvv20visa.gif") no-repeat scroll 0px 0px transparent;
+    height: 124px !important;
+    position: absolute;
+    width: 222px !important;
+    z-index: 9999;
+}
+#tooltipSpan{
+    position: absolute;
+    padding-left: 1px;
+}
+.cvvExpl{
+    background: url("images/sprites/sprite_myaccount.png") no-repeat scroll -703px -930px transparent;
+    width: 14px;
+    height: 13px;
+}
+#depositForm table td.selectTd label.error{
+    color: red;
+    font-size: 10px;
+    margin-left: 3px;
+    padding-top: 3px;
+}
+.depositbtn{
+    width: 476px;
+    padding-top: 10px;
+}
+.depositbtn input.btn {
+    background: url("images/sprites/sprite_myaccount.png") no-repeat scroll -23px -1063px transparent;
+    color: #516802;
+    cursor: pointer;
+    font-size: 16px;
+    width: 214px;
+    height: 33px;
+    font-weight: bold;
+    border: none;
+    float: right;
+}
+#creditCard_img {
+    padding: 10px;
+    width: 210px;
+}
+#wireLogo{
+    display: inline-block;
+    width: 70px;
+    height: 27px;
+    background: url("images/sprites/sprite_myaccount.png") no-repeat scroll -121px -1023px transparent;  
+}
+#wire_form #depositIco{
+    float: right;
+    width: 125px;
+}
+#depositIco {
+    float: left;
+    width: 75px;
+    height: 13px;
+    text-indent: 7px;
+    background: url("images/sprites/sprite_myaccount.png") no-repeat scroll -706px -890px transparent;
+    margin: 6px 10px 0 0;
+}
+#cardImg {
+    float: left;
+    width: 94px;
+    height: 27px;
+    background: url("images/sprites/sprite_myaccount.png") no-repeat scroll -25px -1023px transparent;
+}
+#wire_form .options li .wireBankAccounts_title {
+width: 260px;
+height: 39px;
+line-height: 39px;
+font-size: 16px;
+padding-left: 5px;
+}
+#wire_form .options {
+text-align: left;
+width: 580px;
+}
+#wire_form .options li.dollar {
+width: 270px;
+float: left;
+}
+#wire_form .options li.euro {
+width: 309px;
+float: right;
+}
+#wire_form .options li span.sing{
+ color: #64b02d;   
+}
+#wire_form .options li span.sub {
+color: #8b8b8b;
+}
+#wire_form .options li .content {
+width: 270px;
+min-height: 200px;
+padding: 5px 5px;
+}
+#wire_form .options li .content div {
+margin: 0 0 11px;
+padding: 0 0 5px 0;
+font-weight: bold;
+}
+#wire_form .options li .content div span{
+font-size: 9px;
+font-weight: normal;
+}
+/*----------------End my account - diposit css-------------------------------*/
+/*---------------- my account - history css-------------------------------*/
+table#historyTable {
+    width: 661px;
+    margin: 0 auto;
+    font-size: 12px;
+    border: 1px solid #d5d2d2;
+}
+#leftContiner{
+    padding-top: 20px;
+}
+#leftContiner .filterOptions li.selectDates{
+    float: left;
+}
+.selectDates .title{
+    float: left;
+}
+.positionFilterOptions li{
+    float: left;
+}
+.filterOptions{
+    padding: 0 0 0 15px;
+    width: 661px;
+}
+.positionTypes ul{
+    float: right;
+}
+.assets {
+    background: transparent url("images/slices/myAccount/myAccountTableHeader.png") no-repeat 0 0 scroll;
+    width: 661px;
+    margin: 0 auto;
+    padding: 0px 0 30px 0;
+}
+table#historyTable th, table#historyTable td {
+    background: url("images/sprites/sprite_myaccount.png") no-repeat scroll -544px -518px transparent;
+    color: #302b2b;
+    font-size: 11px;
+    line-height: 35px;
+    padding: 0;
+    text-align: center;
+    text-transform: capitalize;
+}
+table#historyTable tr td:first-child{
+    background-image: none;
+}
+table#historyTable th:first-child {
+    background-image: none;
+}
+/*----------------End my account - history css-------------------------------*/
+/*----------------End my account - position css-------------------------------*/
+#mypositionContiner{
+    width: 728px;
+    border: 1px solid #d5d2d2;;
+    border-top: none;
+}
+.jdpicker_w{
+    float: left;
+    padding-right: 40px;
+    width: 125px;
+    height: 22px;
+}
+.styled-select{
+    float: left;
+}
+#filters{
+    padding: 0 0 20px 3px;
+    margin: 0 auto;
+    width: 663px;
+}
+
+table.investmentsTable tr.won,.investmentsTable .withdrawal{background:#cad89d;}
+table.investmentsTable tr.lost,.investmentsTable .deposit{background:#f4cd99;}
+table.investmentsTable td.call{background: url("images/sprites/sprite_myaccount.png") no-repeat scroll -418px -1062px transparent;}
+table.investmentsTable td.put{background: url("images/sprites/sprite_myaccount.png") no-repeat scroll -328px -1062px transparent;}
+
+
+
+table.investmentsTable {
+    width: 661px;
+    margin: 0 auto;
+    font-size: 12px;
+    border: 1px solid #d5d2d2;
+}
+table.investmentsTable th, table.investmentsTable td {
+    background: url("images/sprites/sprite_myaccount.png") no-repeat scroll -544px -518px transparent;
+    color: #302b2b;
+    font-size: 11px;
+    line-height: 35px;
+    padding: 0;
+    text-align: center;
+    text-transform: capitalize;
+}
+table.investmentsTable th:first-child,table.investmentsTable td:first-child {
+    background-image: none;
+}
+.Date1{
+    background: transparent url("images/sprites/sprite_myaccount.png") no-repeat -343px -450px scroll;
+    width: 94px;
+    border: none;
+    height: 22px;
+    padding-left: 5px;
+}
+#filters .jdpicker_w{
+    padding-right: 20px;
+}
+#TypeSelector select#assetType {
+    background: url("images/sprites/sprite_myaccount.png") no-repeat scroll -283px -949px transparent;
+    cursor: pointer;
+    height: 22px;
+    line-height: 22px;
+    margin: 10px 0 10px 16px;
+    text-align: center;
+    border: none;
+}
+.pagination{
+    
+}
+.pagination ul li{
+    list-style: none;
+    float: left;
+    padding-right: 10px;
+}
+/*----------------End my account - position css-------------------------------*/
+/*--------------------my account - Personal Details css-------------------------------*/
+.request{
+    float: left;
+    width: 690px;
+    background: #fffcfc;
+    
+}
+#mainInfo,.passwordForm{
+    width: 630px;
+    margin: 0 auto;
+}
+#mainInfo table {
+  margin: 0 75px;  
+}
+.passwordForm table{
+    margin: 0 38px;
+}
+
+.request #mainInfo table td.propName {
+    color: #302b2b;
+    font-size: 12px;
+    padding: 13px 40px 0 0;
+    text-align: right;
+}
+.request #mainInfo table td.info {
+    padding-top: 13px;
+}
+.request .passwordForm table td.propName {
+    color: #302b2b;
+    font-size: 12px;
+    padding: 0 26px 0 0;
+    text-align: right;
+    width: 100px;
+}
+.request table td.inputTd, .request table td.selectTd,.request table .submitTd,#mainInfo{
+    padding-top: 15px;
+}
+.request table td.inputTd input {
+    width: 212px;
+    height: 22px;
+    background: transparent url("images/sprites/sprite_myaccount.png") no-repeat -22px -889px scroll;
+    border:none !important;
+}
+.request .Country #countries{
+    display: block;
+    width: 212px;
+    height: 22px;
+    background: transparent url("images/sprites/sprite_myaccount.png") no-repeat -22px -948px scroll;
+    cursor: pointer;
+    border:none;
+}
+.request table .submitTd input.btn {
+    background: url("images/sprites/sprite_myaccount.png") no-repeat scroll -23px -1063px transparent;
+    color: #516802;
+    cursor: pointer;
+    font-size: 16px;
+    width: 214px;
+    height: 33px;
+    font-weight: bold;
+    border: none !important;
+}
+.passwordForm table tr td.desc , .passwordForm table tr td.desc label.error{
+    font-size: 9px;
+    padding: 5px 0 0 0;
+}
+.request .formsSeparator {
+    border-bottom: 1px solid #ebe8e8;
+    margin: 20px auto;
+}
+.request #withdrawal table{
+    margin: 0 auto;
+    padding: 15px;
+}
+.request #withdrawal table tr td.propName{
+ padding: 11px 20px 0 0;
+text-align: right;
+font-size: 13px;
+}
+.request #withdrawal table tr td.submitTd{
+    text-align: right;
+}
+/*----------------End my account - Personal Details css-------------------------------*/
+/*----------------learn more css-------------------------------*/
+.continer{
+    float: left;
+    width: 728px;
+    background: #fffcfc;
+    border: 1px solid #d5d2d2;
+    border-top: none;
+    padding-bottom: 20px;
+}
+.pageContainer{
+    float: left;
+    width: 728px;
+    background: #fffcfc;
+    border: 1px solid #d5d2d2;
+    border-top: none;
+    padding-bottom: 20px;
+    min-height: 334px;
+}
+#secbox{
+    width: 662px;
+    margin: 0 auto;
+}
+#secbox .title{
+    background: none repeat scroll 0 0 transparent;
+    color: #8a9566;
+    font-size: 16px;
+    font-weight: 600;
+    height: 36px;
+    line-height: 36px;
+    text-align: left;
+    text-transform: capitalize;
+    width: 90%;
+    margin: auto;
+    padding-left: 2px;
+}
+#continerTop{
+    width: 662px;
+    margin: auto;
+    padding-top: 20px;
+}
+#continermiddle,#continerbotton{
+    width: 660px;
+    margin: 25px auto 0;
+    background: #fffcfc;
+    border: 1px solid #9e9c9c;
+    float: left;
+    padding-bottom: 20px;
+}
+.twoStep{
+    background: #fffcfc;
+    min-height: 280px;
+    width: 310px;
+    border: 1px solid #9e9c9c;
+}
+#step1{
+    width: 312px;
+    float: left;
+}
+#step2{
+    width: 312px;
+    float: right;
+}
+#step3,#step4{
+    min-height: 260px;
+    padding: 0 0 10px 0;
+}
+.bgContent{
+    padding: 10px 20px;
+}
+.bodyTilte{
+    color: #181818;
+    font-size: 15px;
+    padding-bottom: 5px;
+}
+#imgOpenAccount{
+    background: url("images/sprites/sprite_innerPages.png") no-repeat -54px -218px scroll;
+    width: 242px;
+    height: 34px;
+    display: block;
+}
+#imgDeposit{
+    background: url("images/sprites/sprite_innerPages.png") no-repeat -53px -375px scroll;
+    width: 264px;
+    height: 26px;
+      display: block;
+}
+.contentText{
+    width: 250px;
+    margin: 0 auto;
+    padding: 10px;
+}
+#bodyMovie{
+   height: 217px;
+   width: 614px;
+   margin: 10px auto 0; 
+}
+.imgOpenPos,.imgOpenPosExpanded{
+    float: left;
+    background: url("images/sprites/sprite_innerPages.png") no-repeat scroll -64px -504px transparent;
+    width: 242px;
+    height: 472px;  
+}
+.imgOpenPosExpanded{
+   float: right;
+   background-position: -546px -504px; 
+}
+#bodystep4{
+    width: 550px;
+    margin: 0 auto;
+}
+/*----------------End learn more css-------------------------------*/
+/*----------------EXPIRY RATES css-------------------------------*/
+.rawWrapper{
+    width: 662px;
+    margin: 20px auto;
+}
+.rawWrapper label{
+    line-height: 27px;
+    padding-right: 10px;
+}
+.expiryRateTable{
+    border: 1px solid #d5d2d2;
+    border-top: none;
+    margin: 0 auto;
+    width: 661px;
+}
+.expiryRateTable  thead{
+    background: transparent url("images/sprites/sprite_myaccount.png") no-repeat -9px -150px scroll;
+    width: 661px;
+    color: #112236;
+}
+.expiryRateTable thead th,.expiryRateTable tbody tr td{
+color: #181818;
+text-transform: capitalize;
+line-height: 36px;
+text-align: center;
+background: url("images/sprites/sprite_myaccount.png") no-repeat -544px -518px;
+width: 220px;
+}
+.expiryRateTable thead th:first-child,.expiryRateTable tbody tr td:first-child{
+background: none;
+}
+#expiryRateBlock .rawWrapper #assetType{
+background: url(images/sprites/sprite_myaccount.png) no-repeat -341px -622px;
+width: 240px;
+height: 25px;
+line-height: 22px;
+padding-left: 10px;
+color: #181818;
+font-size: 12px;
+border: none;
+cursor: pointer;    
+}
+
+
+
+/*----------------End EXPIRY RATES css-------------------------------*/
+/*----------------start Asset Index css-------------------------------*/
+.faqTitles{
+    height: 36px;
+    width: 663px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+ul.faqTitles li {
+    color: #5b5d5f;
+    cursor: pointer;
+    float: left;
+    font-size: 14px;
+    height: 36px;
+    width: 130px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: capitalize;
+    margin-right: 1px;
+    background: url("images/sprites/sprite_innerPages.png") no-repeat scroll -252px -1063px transparent;
+}
+ul.faqTitles li.selected {
+    color: #5b5d5f;
+    cursor: default;
+    font-size: 14px;
+    height: 36px;
+    line-height: 36px;
+    padding-top: 0;
+    border: 1px solid #D8D5D5;
+    border-bottom: none;
+    background:#fff;
+}
+ul.faqTitles li:first-child.selected {
+    margin-left: 0;
+}
+.curTab{
+    background-color: #FFFCFC;
+    margin: 0 auto 10px;
+    text-align: left;
+    width: 621px;
+    border: 1px solid #D5D2D2;
+    padding-top: 20px;
+}
+.curTab div h2{
+    color: #302B2B;
+    font-size: 14px;
+    cursor: default;
+    margin: 10px 20px;
+    text-indent: 12px;
+    padding-bottom: 8px;
+}
+.assetBotton{
+    border-bottom: 1px solid #DFDEDD;
+    margin: 0px 20px;
+}
+.curTab .post{
+    line-height: normal;
+    background: #F7F7F5;
+    font-size: 13px;
+    border: 1px solid #E5E5E3;
+    border-top: none;
+    width: 560px;
+    margin-left: 19px;
+    padding: 10px;
+}
+.asset.open h2{
+    background: url("images/slices/innerPages/closeIco.png") no-repeat 0 5px;
+}
+.asset h2{
+    background: url("images/slices/innerPages/openIco.png") no-repeat 0 2px;
+}
+
+/*----------------End Asset Index css-------------------------------*/
+/*----------------start faq Index css-------------------------------*/
+
+.faqTitles.faq{
+    width: 684px;
+}
+
+.curTab.faq {
+    width: 653px;
+    margin-right: 31px;
+}
+    .curTab.faq .post{
+   width: 592px;
+}
+
+/*----------------End faq Index css-------------------------------*/
+
+/*----------------start Dictionary Index css-------------------------------*/
+.pageContainer .search {
+    padding: 20px 0 10px 48px;
+}
+.pageContainer .search .searchStringBg {
+    
+    float: left;
+    height: 22px;
+    width: 144px;
+    margin: 0 0 0 22px;
+}
+.searchString {
+    width: 135px;
+    height: 20px;
+    line-height: 14px;
+    margin: 0 5px 0 5px;
+    background: url("images/sprites/sprite_header.png") no-repeat scroll -8px -194px transparent;
+    border:none;
+    padding-left: 5px;
+}
+#submitSearch {
+    background: url("images/sprites/sprite_header.png") no-repeat scroll -6px -241px transparent;
+    cursor: pointer;
+    float: left;
+    font-size: 12px;
+    height: 26px;
+    margin-left: 3px;
+    width: 69px;
+    margin-top: -3px;
+    line-height: 28px;
+    text-align: center;
+    color: #5B5D5F;
+    border: none;
+}
+#noRecord{
+    color: #302B2B;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+/*----------------End Dictionary Index css-------------------------------*/
+/*----------------start contant us css-------------------------------*/
+.contactUsTable{
+    float: left;
+    width: 371px;
+    color: #252121;
+    text-transform: capitalize;
+    font-size: 12px;
+    margin: 20px 0 0 30px; 
+}
+.contactUsTable td.title {
+    text-align: right;
+}
+.contactUsTable td {
+    padding: 0 10px 10px 0;
+    text-align: left;
+    color: #181818;
+}
+
+.contactUsTable input.wpcf7-form-control {
+    background: transparent url("images/sprites/sprite_innerPages.png") no-repeat -74px -1388px scroll;
+    width: 200px;
+    height: 22px;
+    line-height: 12px;
+    padding: 0 3px;
+    border: none;
+}
+#departWrap select.wpcf7-select{
+    display: block;
+    width: 207px;
+    height: 22px;
+    line-height: 22px;
+    background: transparent url("images/sprites/sprite_innerPages.png") no-repeat -74px -1533px scroll;
+    cursor: pointer;
+    padding: 0 0 0 6px;
+    border:none;
+}
+.message .wpcf7-textarea{
+    background: url("images/sprites/sprite_innerPages.png") no-repeat scroll -74px -1599px transparent;
+    height: 115px;
+    width: 202px;
+    border:none;
+}
+.captchaTr .wpcf7-form-control.wpcf7-captchar{
+    background: transparent url("images/sprites/sprite_innerPages.png") no-repeat -74px -1750px;
+    width: 96px;
+    height: 22px;
+    text-align: center;
+    float: left;
+    margin: 1px 5px 0 0;
+}
+.captchaTr img{
+width: 99px;
+height: 22px;
+border: 1px solid #c2c2c2;
+float: left;
+background: white;
+}
+table.contactUsTable input.wpcf7-submit {
+background: url("images/sprites/sprite_innerPages.png") no-repeat scroll -453px -1531px transparent;
+color: #516802;
+cursor: pointer;
+font-size: 16px;
+width: 214px;
+height: 37px;
+padding: 0;
+text-align: center;
+text-transform: capitalize;
+font-weight: bold;
+position: relative;
+left: -3px;
+}
+
+.pagination {text-align:center;}
+/*----------------End contant us css-------------------------------*/
