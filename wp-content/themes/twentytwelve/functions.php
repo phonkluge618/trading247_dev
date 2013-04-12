@@ -231,6 +231,68 @@ function twentytwelve_widgets_init() {
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
+    
+    register_sidebar( array(
+        'name' => __( 'Getting Started Left Bar', 'twentytwelve' ),
+        'id' => 'sidebar-4',
+        'description' => __( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'twentytwelve' ),
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
+    
+     register_sidebar( array(
+        'name' => __( 'iFrame Tracking Widget', 'twentytwelve' ),
+        'id' => 'iframe-tracking-widget',
+        'description' => __( 'widget to add iFrame Tracking code', 'twentytwelve' ),
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
+    
+      register_sidebar( array(
+        'name' => __( 'Trading Strategy Widget', 'twentytwelve' ),
+        'id' => 'trading-strategy-widget',
+        'description' => __( 'widget for trading strategy', 'twentytwelve' ),
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
+    
+      register_sidebar( array(
+        'name' => __( 'Benifits of Binary Widget', 'twentytwelve' ),
+        'id' => 'Benifits-Of-Binary-widget',
+        'description' => __( 'widget for Benifits of Binary Widget', 'twentytwelve' ),
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
+    
+      register_sidebar( array(
+        'name' => __( 'Why Trading247', 'twentytwelve' ),
+        'id' => 'why-trading247-widget',
+        'description' => __( 'widget for why trading247', 'twentytwelve' ),
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
+    
+    register_sidebar( array(
+        'name' => __( 'Market Analysis', 'twentytwelve' ),
+        'id' => 'market-analysis-widget',
+        'description' => __( 'widget for market analysis', 'twentytwelve' ),
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
+    
+    
 }
 add_action( 'widgets_init', 'twentytwelve_widgets_init' );
 

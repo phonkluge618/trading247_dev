@@ -1,11 +1,105 @@
 .login {
-	padding: 5px;
+	
+}
+.login p{
+    display: inline;
 }
 .login p.error {
 	padding: 5px;
 	border: 1px solid #c00;
 	background-color: #ffebe8;
 	color: #333;
+}
+
+.login input {
+    background:#fff;
+    border:1px solid #1e1f22;
+    font:normal 12px/23px sans-serif, helvetica, arial;
+    display:inline-block;
+    margin-top:15px;
+    width:130px;
+    height:23px;
+    padding:0 10px;
+
+    -webkit-border-radius:2px;
+       -moz-border-radius:2px;
+            border-radius:2px;
+    -webkit-box-sizing:border-box;
+       -moz-box-sizing:border-box;
+            box-sizing:border-box;
+    -webkit-box-shadow:0 1px 2px 0 #1e1f22;
+       -moz-box-shadow:0 1px 2px 0 #1e1f22;
+            box-shadow:0 1px 2px 0 #1e1f22;
+}
+
+.login input[type="submit"]{
+     background-color: #363636;
+    *background-color: #222222;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#444444), to(#222222));
+    background-image: -webkit-linear-gradient(top, #444444, #222222);
+    background-image: -o-linear-gradient(top, #444444, #222222);
+    background-image: linear-gradient(to bottom, #444444, #222222);
+    background-image: -moz-linear-gradient(top, #444444, #222222);
+    background-repeat: repeat-x;
+    border-color: #222222 #222222 #000000;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff444444', endColorstr='#ff222222', GradientType=0);
+    filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+    color:#fff;
+    text-shadow:none;
+    width:65px;
+    padding:0px;
+    font-size: 11px;
+    text-transform:uppercase;
+    height:25px;
+    vertical-align: middle;
+}
+
+.login input[type="submit"]:hover {
+    color:#fff;
+    background:#444;
+}
+
+.login ul li{
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #da4f49;
+    *background-color: #bd362f;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#E74242), to(#C01818));
+    background-image: -webkit-linear-gradient(top, #E74242, #C01818);
+    background-image: -o-linear-gradient(top, #E74242, #C01818);
+    background-image: linear-gradient(to bottom, #E74242, #C01818);
+    background-image: -moz-linear-gradient(top, #E74242, #C01818);
+    background-repeat: repeat-x;
+    border-color: #d22c2c #d22c2c #7c0c0c;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffee5f5b', endColorstr='#ffbd362f', GradientType=0);
+    filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+    width:65px;   
+     border: 1px solid #898989;
+      *border: 0;
+      border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+      border-color: #898989 #898989 #898989;
+      border-bottom-color: #a2a2a2;
+
+      -webkit-border-radius: 4px;
+         -moz-border-radius: 4px;
+              border-radius: 4px;
+     height:25px;
+     border-style: none;
+     font-size: 11px;
+     text-transform: uppercase;
+     line-height: 2;
+
+}
+.login ul li:hover{
+     color:#fff;
+    background:#E74242;
+}
+
+.forgetmenot{
+    display:none !important;
 }
 .login p.message {
 	padding: 5px;
@@ -14,7 +108,23 @@
 	color: #333;
 }
 .login form label {
-	display: block;
+	display: inline;
+    display: none;
+}
+
+.login .tml-action-links{
+    bottom: 30px;
+    float: right;
+    list-style: none outside none;
+    margin-right: 10px;
+    position: relative; 
+    line-height: 25px;
+}
+
+.login .tml-action-links a{
+    text-decoration: none;
+    color: white;
+    padding-left: 10px;
 }
 .login form p.forgetmenot label {
 	display: inline;
