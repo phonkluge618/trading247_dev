@@ -338,7 +338,7 @@ function wp_register( $before = '<li>', $after = '</li>', $echo = true ) {
 
 	if ( ! is_user_logged_in() ) {
 		if ( get_option('users_can_register') )
-			$link = $before . '<a href="' . site_url('wp-login.php?action=register', 'login') . '">' . __('Register') . '</a>' . $after;
+			$link = $before . '<a href="' . site_url('wp-login.php?action=register', 'login') . '">' . __('Sign Up') . '</a>' . $after;
 		else
 			$link = '';
 	} else {
