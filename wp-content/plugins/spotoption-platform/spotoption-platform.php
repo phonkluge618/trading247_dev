@@ -178,7 +178,7 @@ function spotoption_custom_content($content) {
 			$content .= drawpersonalInfoForm();
 			break;
 		case(7):
-			$content =  do_shortcode( '[meteor_slideshow]' ) . $content;
+		//	$content =  do_shortcode( '[meteor_slideshow]' ) . $content;
 			$content .= drawTradingPlatform();
 			break;	
 		case(8):
@@ -210,6 +210,7 @@ function secured_pages()
 		return;
 		}
 	else if(!spot_loggedin() && $meta['page_type'] != 1){
+        
 		header( 'Location: '. get_bloginfo('url') ) ;		
 		return;
 	}	

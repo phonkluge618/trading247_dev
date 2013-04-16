@@ -1,4 +1,4 @@
-//var $j = jQuery.noConflict();
+//var jQueryj = jQuery.noConflict();
 
 var Api = {
 	visitorIp : null ,
@@ -13,9 +13,9 @@ var Api = {
 	init: function () 
 	{
 		this.getCustomerDetails();
-		$('form.loginForm').submit(function(){Api.loginSubmit(); return false;});
+		jQuery('form.loginForm').submit(function(){Api.loginSubmit(); return false;});
 		this.getGeoData();
-                this.getReutersTicker();
+        this.getReutersTicker();
 	},	
 	
 	/***
@@ -27,7 +27,7 @@ var Api = {
 	***/	
 	getGeoData : function ()
 	{
-		$.ajax({
+		jQuery.ajax({
 			url: 'http://'+SiteSettings.ajaxCallBack+'/RPCWP/visitorData',
 			type: "POST",
 			dataType : 'json',
@@ -53,32 +53,34 @@ var Api = {
 	*
 	***/	
 	getReutersTicker : function (){
-		$.ajax({
-			url: 'http://'+SiteSettings.ajaxCallBack+'/RPCWP/getJsonFile/LastOptions.json',
-			type: "POST",
-			dataType : 'json',
-			xhrFields: {
-				withCredentials: true
-			},
-			crossDomain : true,
-			success: function(result){
-				// console.log(result);
-                            var marquee = '<marquee id="reuters" behavior="scroll" scrollamount="3" direction="left" width="350" >' ;
-                             var Container = $('#HeaderNews #marqueeTopParent');
-                             $.each(result,  function( key, asset){
+		jQuery.ajax({
+            url:'getResponseFromTrading247.php',
+            type: 'GET',
+			success: function(data){
+				
+                            var result = jQuery.parseJSON(data);
+                             
+                             var marquee = '<marquee id="reuters" behavior="scroll" scrollamount="5" direction="left" width="750" >' ;
+                             var Container = jQuery('.reuters .marquee-wrap');
+                             jQuery.each(result,  function( key, asset){
+
                                  if(asset.color == 1)
-                                 marquee +='<span id="call">'+ '  ' + asset.assetName + ' '  + asset.endRate + ' ' + asset.endDate +'</span>';
+                                 marquee +='<span id="call">'+ '  ' + asset.assetName + ' <em class="red">'  + asset.endRate + '</em> (' + asset.endDate +')</span>';
                                  else
-                                 marquee +='<span id="put">' + asset.assetName + ' '  + asset.endRate + ' ' + asset.endDate +'</span>';    
+                                 marquee +='<span id="put">' + asset.assetName + ' <em class="blue">'  + asset.endRate + '</em> (' + asset.endDate +')</span>';    
                              });
                              marquee += '</marquee>';
-                             $(Container).append(marquee);
                              
-			}
+                             
+                             jQuery(Container).append(marquee);
+                             
+			},
+            error: function(){
+              //  alert('error');
+            }
 		});
-	
-	
-	
+       
+       
 	},
 	
 	/***
@@ -90,12 +92,12 @@ var Api = {
 	***/		
 	buildPersonalHeader : function(user) 
 	{	
-		var logedin = $('#loggedInBox');
+		var logedin = jQuery('#loggedInBox');
 		logedin.find('div.welcome').text(user.FirstName + ' ' + user.LastName).end()
 				.find('div.balance').text(user.accountBalance + ' ' + user.currency).end();
 		logedin.removeClass('hidden');
                
-		$('#userLoginForm').remove();
+		jQuery('#userLoginForm').remove();
                 if(window.customAfterLogin)
                         customAfterLogin();
                
@@ -111,7 +113,7 @@ var Api = {
 	***/
 	getCustomerDetails : function() 
 	{ 
-		$.ajax({
+		jQuery.ajax({
 			url: 'http://'+SiteSettings.ajaxCallBack+'/RPCWP/getCustomerDetails',
 			type: "POST",
 			dataType : 'json',
@@ -141,10 +143,10 @@ var Api = {
 	***/	
 	loginSubmit : function() 
 	{ 
-		$.ajax({
+		jQuery.ajax({
 			url: 'http://'+SiteSettings.ajaxCallBack+'/Login/login/true',
 			type: "POST",
-			data: $('form.loginForm').serialize(),
+			data: jQuery('form.loginForm').serialize(),
 			xhrFields: {
 				withCredentials: true
 			},
@@ -172,7 +174,7 @@ var Api = {
 	***/
 	
 	localizedAJAX : function() { 
-		$.ajax({
+		jQuery.ajax({
 			url: 'http://'+SiteSettings.ajaxCallBack+'/RPCWP/getlocalData',
 			type: "POST",
 			dataType : 'json',
@@ -195,7 +197,7 @@ var Api = {
 	***/
 	getCountries : function () { 
 		var urlCountry = 'http://'+SiteSettings.ajaxCallBack+'/RPCWP/getJsonFile/Countries.json';
-		 $.ajax({
+		 jQuery.ajax({
 			url: urlCountry,
 			type: "POST",
 			dataType : 'json',
@@ -205,33 +207,34 @@ var Api = {
 			crossDomain : true,
 			success: function(result){
 				var selected = null;
-				var container = $('select.countrylist');
+				var container = jQuery('select.countrylist');
 				container.children('option').remove();	
 				Api.countryObject = result;
-				$.each(result, function(key, country){
+				jQuery.each(result, function(key, country){
 					if (country.iso == Api.visitorCountry){
 						Api.visitorCountryId = country.id;
-						$('form#needHelp input[name="prefix"]').val(country.prefix);
+						jQuery('form#needHelp input[name="prefix"]').val(country.prefix);
 						}
 					var html = '<option value="'+country.id+'" prefix="'+country.prefix+'" >'+country.name+'</option>';
 					container.append(html);
 			   })
 			   
 			   container.val(Api.visitorCountryId);
-			   if(typeof $('input[name="Prefix"]') == 'object')
-					$('input[name="Prefix"]').val($('form#needHelp select :selected').attr('prefix'));
-			   if(typeof $('input[name="phone_prefix"]') == 'object')
-					$('input[name="phone_prefix"]').val($('select#country :selected').attr('prefix'));
+			   if(typeof jQuery('input[name="Prefix"]') == 'object')
+					jQuery('input[name="Prefix"]').val(jQuery('form#needHelp select :selected').attr('prefix'));
+			   if(typeof jQuery('input[name="phone_prefix"]') == 'object')
+					jQuery('input[name="phone_prefix"]').val(jQuery('select#country :selected').attr('prefix'));
 			   
 			}
 		});
 	} 
 }
-$(document).ready(function() {	
+jQuery(document).ready(function() {	
+    
 	Api.init();
-	if(!isNaN($('#so_container')))
+	if(!isNaN(jQuery('#so_container')))
 		SpotOption.load("#so_container", 'en');
 
 	
 }); 
-function setIframeSize(width, height) { $('#Trade').css({ width: width, height: height }); }
+function setIframeSize(width, height) { jQuery('#Trade').css({ width: width, height: height }); }

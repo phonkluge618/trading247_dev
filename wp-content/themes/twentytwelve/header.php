@@ -24,8 +24,9 @@
 <link href="<?php bloginfo('template_url'); ?>/favicon.ico" rel="icon" type="image/x-icon" />
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/main.css"> 
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+
+<link rel="pingback" href="<?php //bloginfo( 'pingback_url' ); ?>" />
+
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/normalize.min.css">
 
 <?php // Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>
@@ -33,9 +34,10 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
 
-<?php wp_head(); ?>
+<?php  wp_head(); ?>
 <script src="<?php bloginfo('template_url'); ?>/js/jquery.tinyscrollbar.min.js"></script>
 <script src="<?php bloginfo('template_url'); ?>/js/main.js"></script> 
+<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/main.css">    
 </head>
 
 <body <?php body_class(); ?>>

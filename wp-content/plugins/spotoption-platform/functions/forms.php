@@ -44,7 +44,7 @@ function drawTradingPlatform()
 {
 	if(function_exists('customTradingPlatform'))
 		return customTradingPlatform();
-	$html = '<iframe src="http://'.get_option('platform_url').'/" width="725px" height="660px" id="Trade" ></iframe>';
+	$html = '<iframe src="http://'.get_option('platform_url').'/" width="752px" height="1095px" id="Trade" frameborder="0" scrolling="no"></iframe>';
 //	$html = '<div id="so_container"></div>';
 	return $html;
 }
