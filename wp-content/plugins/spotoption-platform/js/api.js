@@ -57,7 +57,7 @@ var Api = {
             url:'getResponseFromTrading247.php',
             type: 'GET',
 			success: function(data){
-				
+				            
                             var result = jQuery.parseJSON(data);
                              
                              var marquee = '<marquee id="reuters" behavior="scroll" scrollamount="5" direction="left" width="750" >' ;

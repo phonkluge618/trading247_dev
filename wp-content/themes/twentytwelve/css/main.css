@@ -648,6 +648,7 @@ nav ul ul li:hover {
 }
 nav ul ul li a {
     text-shadow:none;
+    width:182px;
 }nav ul ul ul {    top: -2px;    left: 100%;}
 nav ul li:hover > ul { 
     visibility: visible 

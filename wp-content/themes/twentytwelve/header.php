@@ -39,7 +39,33 @@
 <script src="<?php bloginfo('template_url'); ?>/js/main.js"></script> 
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/main.css">    
 </head>
+<?php
+    
+    
+    $params = 'api_username=zhen@trading247.com&api_password=5160031635c1c&MODULE=Customer&FILTER[email]=integration@trading247.com&FILTER[password]=trading247&COMMAND=view';
+    
+    $curl = curl_init();
+    // Set some options - we are passing in a useragent too here
+    curl_setopt_array($curl, array(
+        CURLOPT_RETURNTRANSFER => 1,
+        CURLOPT_URL => 'http://www.api.trading247.com/Api',
+        CURLOPT_USERAGENT => 'Codular Sample cURL Request',
+        CURLOPT_POST => 1,
+        CURLOPT_POSTFIELDS => $params
+    ));
+    
+    // Send the request & save response to $resp
+    $resp = curl_exec($curl);
+    
+  //  echo $resp; exit;
+   
+    // Close request to clear up some resources
+    curl_close($curl);
+    
 
+    
+     
+?>
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 

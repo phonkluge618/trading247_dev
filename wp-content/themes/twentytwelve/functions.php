@@ -520,3 +520,31 @@ function twentytwelve_customize_preview_js() {
 	wp_enqueue_script( 'twentytwelve-customizer', get_template_directory_uri() . '/js/theme-customizer.js', array( 'customize-preview' ), '20120827', true );
 }
 add_action( 'customize_preview_init', 'twentytwelve_customize_preview_js' );
+
+//function getCustomerDetails(){
+     // Get cURL resource
+  /*  global $current_user;
+    get_currentuserinfo();
+
+
+    $curl = curl_init();
+    // Set some options - we are passing in a useragent too here
+    curl_setopt_array($curl, array(
+        CURLOPT_RETURNTRANSFER => 1,
+        CURLOPT_URL => 'http://www.qa.trading247.com/Login/login/true',
+        CURLOPT_USERAGENT => 'Codular Sample cURL Request',
+        CURLOPT_POST => 1,
+        CURLOPT_POSTFIELDS => array(
+            email => $current_user->user_login,
+            password => $current_user->user_pass
+        )
+    ));
+    // Send the request & save response to $resp
+    $resp = curl_exec($curl);
+    // Close request to clear up some resources
+    curl_close($curl);
+    
+    echo $resp; 
+    exit;   */
+    
+//}

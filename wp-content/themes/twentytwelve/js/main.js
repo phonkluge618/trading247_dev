@@ -1,3 +1,5 @@
+function css_browser_selector(u) { var ua = u.toLowerCase(), is = function (t) { return ua.indexOf(t) > -1 }, g = 'gecko', w = 'webkit', s = 'safari', o = 'opera', m = 'mobile', h = document.documentElement, b = [(!(/opera|webtv/i.test(ua)) && /msie\s(\d)/.test(ua)) ? ('ie ie' + RegExp.jQuery1) : is('firefox/2') ? g + ' ff2' : is('firefox/3.5') ? g + ' ff3 ff3_5' : is('firefox/3.6') ? g + ' ff3 ff3_6' : is('firefox/3') ? g + ' ff3' : is('gecko/') ? g : is('opera') ? o + (/version\/(\d+)/.test(ua) ? ' ' + o + RegExp.jQuery1 : (/opera(\s|\/)(\d+)/.test(ua) ? ' ' + o + RegExp.jQuery2 : '')) : is('konqueror') ? 'konqueror' : is('blackberry') ? m + ' blackberry' : is('android') ? m + ' android' : is('chrome') ? w + ' chrome' : is('iron') ? w + ' iron' : is('applewebkit/') ? w + ' ' + s + (/version\/(\d+)/.test(ua) ? ' ' + s + RegExp.jQuery1 : '') : is('mozilla/') ? g : '', is('j2me') ? m + ' j2me' : is('iphone') ? m + ' iphone' : is('ipod') ? m + ' ipod' : is('ipad') ? m + ' ipad' : is('mac') ? 'mac' : is('darwin') ? 'mac' : is('webtv') ? 'webtv' : is('win') ? 'win' + (is('windows nt 6.0') ? ' vista' : '') : is('freebsd') ? 'freebsd' : (is('x11') || is('linux')) ? 'linux' : '', 'js']; c = b.join(' '); h.className += ' ' + c; return c; }; css_browser_selector(navigator.userAgent);
+
 jQuery(function () {
     searchAssets();
     jQuery('.login input').placeHolder();
@@ -7,7 +9,7 @@ jQuery(function () {
         d.setDate(d.getDate());
         var o = ('0' + d.getHours()).slice(-2) + ' : ' + ('0' + d.getMinutes()).slice(-2) + ' : ' +
                 ('0' + d.getSeconds()).slice(-2) + ' - ' + dayNames[d.getDay()] + " " +
-                ('0' + d.getDate()).slice(-2) + ' ' + ('0' + parseInt(d.getMonth()+1)).slice(-2) + ' ' + d.getFullYear();
+                ('0' + d.getDate()).slice(-2) + ' ' + ('0' +parseInt(d.getMonth()+1)).slice(-2) + ' ' + d.getFullYear();
         jQuery('.dateTime').html(o);
     }, 1000);
     jQuery('.language').on('click', function () {
@@ -57,31 +59,6 @@ jQuery(function () {
         invertscroll: false
     });
      
-    jQuery.ajax({
-        //    url: 'http://'+SiteSettings.ajaxCallBack+'/RPCWP/getJsonFile/LastOptions.json',
-            url:'http://www.qa.trading247.com/RPCWP/getJsonFile/LastOptions.json',
-            type: "POST",
-            dataType : 'json',
-            xhrFields: {
-                withCredentials: true
-            },
-            crossDomain : true,
-            success: function(result){
-                // console.log(result);
-                            alert(result);
-                            var marquee = '<marquee id="reuters" behavior="scroll" scrollamount="3" direction="left" width="350" >' ;
-                             var Container = $('#HeaderNews #marqueeTopParent');
-                             $.each(result,  function( key, asset){
-                                 if(asset.color == 1)
-                                 marquee +='<span id="call">'+ '  ' + asset.assetName + ' '  + asset.endRate + ' ' + asset.endDate +'</span>';
-                                 else
-                                 marquee +='<span id="put">' + asset.assetName + ' '  + asset.endRate + ' ' + asset.endDate +'</span>';    
-                             });
-                             marquee += '</marquee>';
-                             $(Container).append(marquee);
-                             
-            }
-        });
         
     // at-stock
     jQuery('.atrade img').each(function () {
@@ -122,6 +99,10 @@ jQuery(function () {
         textAreaHeight: 150,
         textAreaResize: false
     });
+    jQuery('#startTrading').customForm({
+        theme: 2,
+        responsive: true
+    })
 
     jQuery('#searchFaq').bind('keyup change', function (ev) {
 
@@ -140,11 +121,39 @@ jQuery(function () {
     });
 
     simple_tooltip(".sharethis a", "tooltip");
-});jQuery(window).load(function () {
+
+
+    jQuery('.sideTab').each(function () {
+        var tab = jQuery(this);
+        jQuery('.tab-section').css('opacity', 0)
+        jQuery(tab.find('.st-nav li.active a').attr('href')).css('display', 'block')
+        .animate({opacity: 1}, 300)
+
+
+        tab.find('.st-nav li a').on('click', function (i) {
+            i.preventDefault();
+            jQuery(this).blur();
+
+            var activeTab = jQuery(this).attr('href')
+
+            tab.find('.st-nav li').removeClass('active');
+            tab.find('.tab-section').css('display', 'none').css('opacity', 0)
+            jQuery(this).parent('li').addClass('active');
+
+            jQuery(activeTab).css('display', 'block').animate({ opacity: 1 }, 300)
+
+        });
+    })
+});
+
+
+jQuery(window).load(function () {
     //set cBody aside height
     if (jQuery('.cBody aside').outerHeight() < jQuery('.cBody section').outerHeight(true)) {
+
         jQuery('.cBody aside').outerHeight(jQuery('.cBody section').outerHeight(true));
-    } else { jQuery('.cBody aside').height(350); };
+
+    } else { jQuery('.cBody aside').height(this); };
 });
 
 //Placeholder Function
@@ -165,12 +174,12 @@ function simple_tooltip(target_items, name) {
         var my_tooltip = jQuery("#" + name + i);
         if (jQuery(this).attr("title") != "") { // checks if there is a title
             jQuery(this).removeAttr("title").mouseover(function () {
-                my_tooltip.css({ opacity: 0.8, display: "none" }).fadeIn(400);
+                my_tooltip.css({ opacity: 1, display: "none" }).fadeIn(50);
             })
             .mousemove(function (kmouse) {
                 my_tooltip.css({ left: kmouse.pageX + 15, top: kmouse.pageY + 15 });
             })            .mouseout(function () {
-                my_tooltip.fadeOut(400);
+                my_tooltip.fadeOut(50);
             });
         }
     });
@@ -233,18 +242,24 @@ function searchAssets() {
 }
 
 
+
 (function (jQuery) {
     jQuery.fn.customForm = function (options) {
         var settings = jQuery.extend({
             width: 300,
             textAreaHeight: 95,
-            textAreaResize: true
+            textAreaResize: true,
+            theme: 1,
+            responsive: false
         }, options);
 
         return this.each(function () {
             var form = jQuery(this);
-            form.width(settings.width);
+
             
+            if (settings.responsive == false) {
+                form.width(settings.width);
+            }
             //Form Type
             var inpuText = form.find('input:text'),
                 select = form.find('select'),
@@ -254,28 +269,45 @@ function searchAssets() {
 
             inpuText.each(function () {
                 var elem = jQuery(this);
-                elem.wrapElem();
+
+                if (settings.theme == 1) {
+                    elem.wrapElem();
+                } else {
+                    elem.wrap('<span class="textbox v2" />')
+                }
+                
 
                 if (elem.val() == "") {
                     elem.val(elem.attr('data-default'));
                 }
 
-                elem.width(settings.width - 20)
-                    .blur(function () { if (this.value === '') { this.value = jQuery(this).attr('data-default'); } })
-                    .focus(function () { if (this.value == jQuery(this).attr('data-default')) { this.value = ''; } })
+                if (settings.responsive == false) {
+                    elem.width(settings.width - 20)
+                    .parents('.cfBody').width(settings.width);
+                }
+                
+                elem.blur(function () { if (this.value === '') { this.value = jQuery(this).attr('data-default'); } })
+                .focus(function () { if (this.value == jQuery(this).attr('data-default')) { this.value = ''; } })
 
-                elem.parents('.cfBody').width(settings.width);
+                
             });
 
             select.each(function () {
                 var elem = jQuery(this);
-                elem.width(settings.width - 24);
-                elem.wrapElem();
+                if (settings.responsive == false) {
+                    elem.width(settings.width - 24);
+                }
+               
 
-                elem.parents('.cfBody').width(settings.width);
-                elem.parents('.sL').prepend('<i />')
-                elem.parents('.sL').prepend('<span />')
-                elem.parent().find('span').text(elem.find('option:selected').text())
+                if (settings.theme == 1) {
+                    elem.wrapElem();
+                    elem.parents('.cfBody').width(settings.width);
+                    elem.parents('.sL').prepend('<i />')
+                    elem.parents('.sL').prepend('<span />')
+                    elem.parent().find('span').text(elem.find('option:selected').text())
+                }
+
+               
                 elem.change(function () {
                     elem.parent().find('span').text(elem.find('option:selected').text());
                 });
@@ -283,14 +315,22 @@ function searchAssets() {
 
             textArea.each(function () {
                 var elem = jQuery(this);
-                elem.width(settings.width - 20)
-                    .height(settings.textAreaHeight)
+
+                if (settings.responsive == false) {
+                    elem.width(settings.width - 20)
+                }
+                
+
+                elem.height(settings.textAreaHeight)
                     .focus(function () { if (elem.val() == elem.attr('data-default')) { elem.val("") } })
                     .blur(function () { if (elem.val() == "") { elem.val(elem.attr('data-default')) } })
                 if (settings.textAreaResize == false) {
                     elem.css('resize', 'none')
                 }
-                elem.wrapElem();
+
+                if (settings.theme == 1) {
+                    elem.wrapElem();
+                }
 
                 if (elem.val() == "") {
                     elem.val(elem.attr('data-default'))
@@ -302,9 +342,7 @@ function searchAssets() {
             });
         });
     }
-})(jQuery);
 
-(function (jQuery) {
     jQuery.fn.wrapElem = function () {
         var elem = jQuery(this);
 
@@ -321,7 +359,7 @@ function searchAssets() {
                 .wrap('<div class="yright" />')
                 .wrap('<div class="tR" />')
                 .wrap('<div class="tL" />')
-            
+
         } else { elem.wrap('<div class="cfBody" />') }
 
         elem.wrap('<div class="sR" />')
@@ -329,6 +367,7 @@ function searchAssets() {
 
     };
 })(jQuery);
+
 
 jQuery.fn.highlight = function (pat) {
     function innerHighlight(node, pat) {
